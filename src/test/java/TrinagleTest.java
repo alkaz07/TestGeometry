@@ -35,8 +35,8 @@ public class TrinagleTest {
         Triangle tr = new Triangle(new Point(0, 0), new Point(3, 4), new Point(0, 4));
         Assertions.assertEquals(6, tr.area());
     }
-    //@Test
-    //public void testEqualsTriangle(){
-    //    Triangle triangle = new Triangle(new Point(0, 0), new Point(3, 4), new Point())
-    //}
+    @Test
+    public void testEqualsTriangle(){
+        Triangle triangle = new Triangle(new Point(0, 0), new Point(3, 4), new Point())
+    }
 }
