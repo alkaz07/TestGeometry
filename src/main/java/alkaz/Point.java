@@ -9,6 +9,7 @@ public class Point {
     }
     public double distanceTo(Point other){
         return Math.sqrt((x - other.x)*(x - other.x) + (y - other.y)*(y - other.y));
+
     }
 
     @Override

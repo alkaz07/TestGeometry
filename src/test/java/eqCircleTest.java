@@ -20,5 +20,6 @@ public class eqCircleTest {
         Assertions.assertEquals(true, c2.eqCircle(c3));
         Assertions.assertEquals(true, c3.eqCircle(c4));
         Assertions.assertEquals(false, c6.eqCircle(c2));
+
     }
 }

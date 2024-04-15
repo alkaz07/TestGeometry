@@ -5,10 +5,12 @@ import static java.lang.Math.abs;
 public class Triangle {
     Point vertex1, vertex2, vertex3;
 
+
     public Triangle(Point vertex1, Point vertex2, Point vertex3) {
         this.vertex1 = vertex1;
         this.vertex2 = vertex2;
         this.vertex3 = vertex3;
+
     }
 
     public double perimeter(){

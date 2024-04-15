@@ -20,6 +20,7 @@ public class EqTriangTest {
 
         Assertions.assertTrue(tr3.eqTriang(tr4));
 
+
     }
 
 }
