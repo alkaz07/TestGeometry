@@ -20,4 +20,8 @@ public class Circle {
         else
             return false;
     }
+    public boolean eqCircle(Circle c){
+        return (r==c.r);
+    }
+
 }

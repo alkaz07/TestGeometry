@@ -33,4 +33,37 @@ public class Triangle {
 
         return 0.5*abs((vertex2.x - vertex1.x)*(vertex3.y- vertex1.y) - (vertex3.x- vertex1.x)*(vertex2.y- vertex1.y));
     }
+    public boolean eqTriang(Triangle t) {
+        double side1 = vertex1.distanceTo(vertex2);
+        double side2 = vertex1.distanceTo(vertex3);
+        double side3 = vertex3.distanceTo(vertex2);
+
+        double tside1 = t.vertex1.distanceTo(t.vertex2);
+        double tside2 = t.vertex1.distanceTo(t.vertex3);
+        double tside3 = t.vertex3.distanceTo(t.vertex2);
+
+        if (side1 == tside1)
+            if (side2 == tside2)
+                if (side3 == tside3) return true;
+                else return false;
+            else if (side2 == tside3)
+                if (side3 == tside2) return true;
+                else return false;
+        if (side1 == tside2)
+            if (side2 == tside3)
+                if (side3 == tside1) return true;
+                else return false;
+            else if (side3 == tside3)
+                if (side2 == tside1) return true;
+                else return false;
+        if (side1 == tside3)
+            if (side2 == tside2)
+                if (side3 == tside1) return true;
+                else return false;
+            else if (side2 == tside1)
+                if (side3 == tside2) return true;
+                else return false;
+
+        return false;
+    }
 }
