@@ -33,4 +33,5 @@ public class Triangle {
 
         return 0.5*abs((vertex2.x - vertex1.x)*(vertex3.y- vertex1.y) - (vertex3.x- vertex1.x)*(vertex2.y- vertex1.y));
     }
+
 }

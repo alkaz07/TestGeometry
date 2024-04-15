@@ -20,4 +20,10 @@ public class Circle {
         else
             return false;
     }
+    public  boolean equals (Circle other){
+        if (r == other.r)
+            return true;
+        else
+            return false;
+    }
 }
