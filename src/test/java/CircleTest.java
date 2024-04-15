@@ -22,5 +22,17 @@ public class CircleTest {
         Assertions.assertEquals(false, c5.intersectsWith(c1));
         Assertions.assertEquals(true, c1.intersectsWith(c6));
         Assertions.assertEquals(true, c6.intersectsWith(c1));
+
+    }
+    @Test
+    public void testEquals(){
+        Circle c1 = new Circle(10, new Point(0, 0));
+        Circle c2 = new Circle(10, new Point(100, 0));
+        Circle c3 = new Circle(10, new Point(6, 0));
+        Circle c4 = new Circle(10, new Point(0, 10));
+        Circle c5 = new Circle(5, new Point(1, 1) );
+        Circle c6 = new Circle(5, new Point(7, 7));
+        Assertions.assertEquals(true,c1.equals(c2));
+        Assertions.assertEquals(false,c1.equals(c5));
     }
 }

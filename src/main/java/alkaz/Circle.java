@@ -24,4 +24,10 @@ public class Circle {
         return (r==c.r);
     }
 
+    public  boolean equals (Circle other){
+        if (r == other.r)
+            return true;
+        else
+            return false;
+    }
 }
