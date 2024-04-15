@@ -19,6 +19,7 @@ public class TrinagleTest {
         c = new Point(123, 150);
     }
 
+
     @Test
     public void testPerim(){
         Triangle tr = new Triangle(new Point(0, 0), new Point(3, 4), new Point(0, 4));

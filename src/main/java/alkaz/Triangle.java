@@ -42,6 +42,7 @@ public class Triangle {
         double tside2 = t.vertex1.distanceTo(t.vertex3);
         double tside3 = t.vertex3.distanceTo(t.vertex2);
 
+
         if (side1 == tside1)
             if (side2 == tside2)
                 if (side3 == tside3) return true;
