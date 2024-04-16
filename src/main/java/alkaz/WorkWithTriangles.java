@@ -45,4 +45,8 @@ public class WorkWithTriangles {
         }
         return sumS/ triangles.size();
     }
+
+    public static int countEqualTriangles(ArrayList<Triangle> triangles){
+        return 0;
+    }
 }

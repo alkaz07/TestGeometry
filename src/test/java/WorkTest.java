@@ -52,4 +52,19 @@ public class WorkTest {
         triangles.add(makeTrFromStr("0 0 0 4 3 0"));
         Assertions.assertEquals(15, averageArea(triangles));
     }
+
+    @Test
+    public void testCountEqualInEmptyList(){
+        ArrayList<Triangle> triangles = new ArrayList<>();
+        Assertions.assertEquals(0, countEqualTriangles(triangles));
+    }
+
+    @Test
+    public void testCountEqualInSimpleList(){
+        ArrayList<Triangle> triangles = new ArrayList<>();
+        triangles.add(new Triangle(new Point(0, 0), new Point(1, 1), new Point(0, 1)));
+        Assertions.assertEquals(0, countEqualTriangles(triangles));
+    }
+
+
 }
