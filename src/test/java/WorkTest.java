@@ -66,5 +66,54 @@ public class WorkTest {
         Assertions.assertEquals(0, countEqualTriangles(triangles));
     }
 
+    @Test
+    public void testCountEqTrInList1 (){
+        ArrayList<Triangle> listObrazec = new ArrayList<>();
+        listObrazec.add(makeTrFromStr("0 0 0 2 2 0"));
+        listObrazec.add(makeTrFromStr("0 0 0 2 2 0"));
+        listObrazec.add(makeTrFromStr("0 0 0 2 2 0"));
+        listObrazec.add(makeTrFromStr("5 6 123 100 123 6"));
+        listObrazec.add(makeTrFromStr("5 6 123 100 123 6"));
+        Assertions.assertEquals(5, countEqualTriangles(listObrazec));
+        listObrazec.clear();
+        listObrazec.add(makeTrFromStr("5 6 123 100 123 6"));
+        listObrazec.add(makeTrFromStr("5 6 123 100 123 6"));
+        listObrazec.add(makeTrFromStr("0 0 0 2 2 0"));
+        listObrazec.add(makeTrFromStr("0 0 0 2 2 0"));
+        listObrazec.add(makeTrFromStr("0 0 0 2 2 0"));
+        Assertions.assertEquals(5, countEqualTriangles(listObrazec));
+        listObrazec.add(makeTrFromStr("5 6 123 100 123 6"));
+        Assertions.assertEquals(6, countEqualTriangles(listObrazec));
+        listObrazec.add(makeTrFromStr("5 6 123 100 123 6"));
+        Assertions.assertEquals(7, countEqualTriangles(listObrazec));
+    }
+
+    @Test
+    public void testCountEqTrInList2(){
+        ArrayList<Triangle> triangles = new ArrayList<>();
+        triangles.add(new Triangle(new Point(0,0), new Point(1,1), new Point(0,1)));
+        triangles.add(new Triangle(new Point(20,0), new Point(10,3), new Point(0,1)));
+        triangles.add(new Triangle(new Point(50,43), new Point(10,10), new Point(20,13)));
+        Assertions.assertEquals(0, countEqualTriangles(triangles));
+    }
+
+    @Test
+    public void testCountEqTrInList3(){
+        ArrayList<Triangle> triangles = new ArrayList<>();
+        triangles.add(new Triangle(new Point(0,0), new Point(1,1), new Point(0,1)));
+        triangles.add(new Triangle(new Point(20,0), new Point(10,3), new Point(0,1)));
+        triangles.add(new Triangle(new Point(20,0), new Point(10,3), new Point(0,1)));
+        Assertions.assertEquals(2, countEqualTriangles(triangles));
+    }
+
+    @Test
+    public void testCountEqTrInList4(){
+        ArrayList<Triangle> triangles = new ArrayList<>();
+        triangles.add(new Triangle(new Point(0,0), new Point(1,1), new Point(0,1)));
+        triangles.add(new Triangle(new Point(20,0), new Point(10,3), new Point(0,1)));
+        triangles.add(new Triangle(new Point(20,0), new Point(10,3), new Point(0,1)));
+        triangles.add(new Triangle(new Point(20,0), new Point(10,3), new Point(0,1)));
+        Assertions.assertEquals(3, countEqualTriangles(triangles));
+    }
 
 }

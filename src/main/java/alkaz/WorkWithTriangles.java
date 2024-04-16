@@ -47,6 +47,13 @@ public class WorkWithTriangles {
     }
 
     public static int countEqualTriangles(ArrayList<Triangle> triangles){
-        return 0;
+        int counter=0;
+        for (Triangle ti: triangles  ) {
+            for (Triangle tj: triangles  ) {
+                if (ti != tj && ti.eqTriang(tj))
+                    counter++;
+            }
+        }
+        return counter;
     }
 }
