@@ -1,5 +1,7 @@
 package alkaz;
 
+import java.util.Objects;
+
 import static java.lang.Math.abs;
 
 public class Triangle {
@@ -70,4 +72,16 @@ public class Triangle {
         return false;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Triangle triangle = (Triangle) o;
+        return Objects.equals(vertex1, triangle.vertex1) && Objects.equals(vertex2, triangle.vertex2) && Objects.equals(vertex3, triangle.vertex3);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vertex1, vertex2, vertex3);
+    }
 }
